@@ -1,3 +1,5 @@
 <ul *ngFor='let quote of quotes'>
-    <li class="p-3">{{ quote.message }} <span class="fa-solid fa-thumbs-up"> {{ quote.upvote }} </span><span class="fa-solid fa-thumbs-down"> {{ quote.downvote }}</span></li>
+    <div class="pad" appHighlight>
+        <li class="p-3">{{ quote.message }} <span class="fa-solid fa-thumbs-up"> {{ quote.upvote }} </span><span class="fa-solid fa-thumbs-down"> {{ quote.downvote }}</span></li>
+    </div>
 </ul>
