@@ -1,14 +1,45 @@
-<ul *ngFor='let quote of quotes'>
-    <div *ngIf="quote.upvote== highest && quote.upvote > 0; then highlight else empty"></div>
+<div class="container">
+    <hr>
 
-    <ng-template #highlight>
-        <div class="pad" appHighlight>
-            <li class="p-3">{{ quote.message }} <span class="fa-solid fa-thumbs-up"> {{ quote.upvote }} </span><span class="fa-solid fa-thumbs-down"> {{ quote.downvote }}</span></li>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card mt-4" id="available-quotes">
+                <div class="card-tittle">
+                    <h3 class="text-center">My Quotes:</h3>
+                </div>
+                <div class="card-body">
+                    <ul *ngFor='let quote of quotes; let i = index'>
+                        <div *ngIf="quote.upvote== highest && quote.upvote > 0; then highlight else empty"></div>
+
+                        <ng-template #highlight>
+                            <div class="pad" appHighlight>
+                                <li class="p-3">{{ quote.message }} <i class="bi bi-hand-thumbs-up-fill"></i> {{ quote.upvote }} <i class="bi bi-hand-thumbs-down-fill"></i> {{ quote.downvote }}
+                                </li>
+                                <button (click)='showAuthor(i)' class="btn btn-dark">Show Author</button>
+                            </div>
+                        </ng-template>
+                        <ng-template #empty>
+                            <div class="pad">
+                                <li class="p-3">{{ quote.message }} <i class="bi bi-hand-thumbs-up-fill"></i> {{ quote.upvote }} <i class="bi bi-hand-thumbs-down-fill"></i> {{ quote.downvote }}</li>
+                                <button (click)='showAuthor(i)' class="btn btn-dark">Show Author</button>
+                            </div>
+                        </ng-template>
+                        <div *ngIf='quote.showDescription'>
+                            <app-quote-details [quote]='quote' (isComplete)='deleteQuote($event,i)'></app-quote-details>
+                        </div>
+                    </ul>
+                </div>
+            </div>
         </div>
-    </ng-template>
-    <ng-template #empty>
-        <div class="pad">
-            <li class="p-3">{{ quote.message }} <span class="fa-solid fa-thumbs-up"> {{ quote.upvote }} </span><span class="fa-solid fa-thumbs-down"> {{ quote.downvote }}</span></li>
+        <div class="col-md-6">
+            <div class="card mt-4">
+                <div class="card-tittle">
+                    <h2 class="text-center">Create quote:</h2>
+                </div>
+                <div class="card-body">
+                    <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
+                </div>
+            </div>
         </div>
-    </ng-template>
-</ul>
+
+    </div>

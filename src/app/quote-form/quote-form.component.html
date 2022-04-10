@@ -1,1 +1,21 @@
-<p>quote-form works!</p>
+<div class="container-fluid">
+    <hr>
+    <form (ngSubmit)='submitGoal()' #quoteForm='ngForm'>
+        <div class="form-group">
+            <label for="name">Quote</label>
+            <textarea class="form-control" id="message" rows="4" [(ngModel)]="newQuote.message" name="message" #message="ngModel" required></textarea>
+            <div [hidden]="message.valid || message.pristine" class="alert alert-danger">
+                <p>Field must be filled!</p>
+            </div>
+
+        </div>
+        <div class="form-group">
+            <label for="author">Name of author</label>
+            <input type="text" class="form-control" id="author" [(ngModel)]="newQuote.author" name="author" #author='ngModel' required>
+            <div [hidden]="author.valid || author.pristine" class="alert alert-danger">
+                <p>Field must be filled!</p>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-success mt-2">Add Goal</button>
+    </form>
+</div>
