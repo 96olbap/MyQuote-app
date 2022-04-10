@@ -10,6 +10,7 @@ import { HighlightDirective } from './highlight.directive';
 import { QuoteFormComponent } from './quote-form/quote-form.component';
 import { IncUpvoteDirective } from './inc-upvote.directive';
 import { QuoteDetailsComponent } from './quote-details/quote-details.component';
+import { PeriodPipe } from './period.pipe';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { QuoteDetailsComponent } from './quote-details/quote-details.component';
     HighlightDirective,
     QuoteFormComponent,
     IncUpvoteDirective,
-    QuoteDetailsComponent
+    QuoteDetailsComponent,
+    PeriodPipe
   ],
   imports: [
     BrowserModule,
