@@ -14,6 +14,13 @@ export class QuotesComponent implements OnInit {
     new Quote(3, 'The most important things in life are mostly thr most hopeless..', 0, 0),
   ]
 
+  arr: number[] = this.quotes.map(
+    function (quote){
+      return quote.upvote
+    }
+  )
+  highest = Math.max(...this.arr)
+
   constructor() { }
 
   ngOnInit(): void {

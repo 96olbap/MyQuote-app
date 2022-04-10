@@ -1,5 +1,14 @@
 <ul *ngFor='let quote of quotes'>
-    <div class="pad" appHighlight>
-        <li class="p-3">{{ quote.message }} <span class="fa-solid fa-thumbs-up"> {{ quote.upvote }} </span><span class="fa-solid fa-thumbs-down"> {{ quote.downvote }}</span></li>
-    </div>
+    <div *ngIf="quote.upvote== highest && quote.upvote > 0; then highlight else empty"></div>
+
+    <ng-template #highlight>
+        <div class="pad" appHighlight>
+            <li class="p-3">{{ quote.message }} <span class="fa-solid fa-thumbs-up"> {{ quote.upvote }} </span><span class="fa-solid fa-thumbs-down"> {{ quote.downvote }}</span></li>
+        </div>
+    </ng-template>
+    <ng-template #empty>
+        <div class="pad">
+            <li class="p-3">{{ quote.message }} <span class="fa-solid fa-thumbs-up"> {{ quote.upvote }} </span><span class="fa-solid fa-thumbs-down"> {{ quote.downvote }}</span></li>
+        </div>
+    </ng-template>
 </ul>
