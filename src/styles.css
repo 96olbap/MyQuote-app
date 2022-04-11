@@ -1,6 +1,43 @@
+#appComp {
+    background-color: rgb(60, 16, 16);
+}
+
+#landing-text {
+    color: rgba(240, 249, 140, 0.832);
+    font-weight: bold;
+    font-family: sans-serif;
+    padding: 2px;
+}
+
+#appCompCard {
+    background: transparent;
+}
+
 #available-quotes {
     background-color: #FFCEC4;
+    opacity: 90%;
+    border-radius: 8px;
+}
+
+#qtForm {
+    background-color: #331008;
+    color: whitesmoke;
+    border-radius: 8px;
+    opacity: 85%;
+}
+
+#mj {
+    background-image: url(img/blueBrick.jpg);
+    border-radius: 10px;
 }
 
 
+/* .body {
+    background-color: rgb(53, 52, 52);
+} */
+
+
 /* #E6B7AD */
+
+
+/* #A4776E */

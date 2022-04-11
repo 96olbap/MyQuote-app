@@ -9,14 +9,13 @@ import { Quote } from '../quote';
 export class QuotesComponent implements OnInit {
 
   quotes: Quote[] =[
-    new Quote(1, 'We write to taste life twice, in the moment and in retrospect.', 0, 0, 'Wepukhulu'),
-    new Quote(2, 'If my doctor told me I had only six minutes to live, I would not brood. I would type a little faster.', 0, 0, 'Nat'),
-    new Quote(3, 'The most important things in life are mostly thr most hopeless..', 0, 0, 'Nasim'),
-  ]
+    new Quote(1, 'We write to taste life twice, in the moment and in retrospect.', 5, 1, 'Wepukhulu'),
+    new Quote(2, 'If my doctor told me I had only six minutes to live, I would not brood. I would type a little faster.', 7, 0, 'Carla'),
+    new Quote(3, 'The most important things in life are mostly the most hopeless..', 6, 0, 'Nasim'),  ]
   addNewQuote(quote:any){
     let quoteLength = this.quotes.length;
     quote.id = quoteLength+1;
-    // quote.completeDate = new Date(goal.completeDate)
+    // quote.completeDate = new Date(gquote.completeDate)
     this.quotes.push(quote)
   }
 
