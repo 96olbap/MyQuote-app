@@ -8,7 +8,7 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 
 ## BDD
 
-# Context
+### Context
 Given that the user adds a quote and the Authors name,
 And the Author name(s) are valid,
 And the quote is valid,
@@ -16,7 +16,7 @@ And the quote is valid,
 ## Event
 When the User clicks the submit bytton
 
-# Outcomes
+### Outcomes
 Then the app should add quote to the list of quotes present.
 - User Inputs Quote and Author's name.
 - Publish button Starts the app.
