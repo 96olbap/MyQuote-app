@@ -1,11 +1,12 @@
 #appComp {
     background-color: rgb(60, 16, 16);
+    opacity: 95%;
 }
 
 #landing-text {
     color: rgba(240, 249, 140, 0.832);
     font-weight: bold;
-    font-family: sans-serif;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     padding: 2px;
 }
 
@@ -19,16 +20,47 @@
     border-radius: 8px;
 }
 
+.header1 {
+    color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bolder;
+    font-size: 6rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
 #qtForm {
     background-color: #331008;
     color: whitesmoke;
     border-radius: 8px;
     opacity: 85%;
+    font-size: 1.5rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 #mj {
     background-image: url(img/blueBrick.jpg);
     border-radius: 10px;
+    box-shadow: 0 0 0.3rem 0.3rem #202020;
+    font-size: 1.5rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+#qtForm:hover {
+    box-shadow: #050505;
+}
+
+#qtForm {
+    box-shadow: 0 0 0.3rem 0.3rem #050505;
+}
+
+.row-footer {
+    font-size: medium;
+    font-weight: 600;
+    color: #050505;
+    margin-top: 2;
 }
 
 
@@ -41,3 +73,11 @@
 
 
 /* #A4776E */
+
+
+/* .pad::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+} */
