@@ -1,6 +1,8 @@
 #appComp {
     background-color: rgb(60, 16, 16);
     opacity: 95%;
+    height: max-content;
+    width: auto;
 }
 
 #landing-text {
