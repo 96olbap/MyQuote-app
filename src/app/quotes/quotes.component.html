@@ -9,7 +9,7 @@
                 </div>
                 <div class="card-body">
                     <ul *ngFor='let quote of quotes; let i = index'>
-                        <div *ngIf="quote.upvote== highest && quote.upvote > 0; then highlight else empty"></div>
+                        <div *ngIf="quote.upvote== highest && quote.upvote > 1; then highlight else empty"></div>
 
                         <ng-template #highlight>
                             <div class="pad" appHighlight>
