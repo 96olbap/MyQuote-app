@@ -13,14 +13,15 @@
 
                         <ng-template #highlight>
                             <div class="pad" appHighlight>
-                                <li class="p-3">{{ quote.message }} <i class="bi bi-hand-thumbs-up-fill"></i> {{ quote.upvote }} <i class="bi bi-hand-thumbs-down-fill"></i> {{ quote.downvote }}
-                                </li>
+                                <li class="p-3">{{ quote.message }} <button class="btn btn-outline-dark"><i class="bi bi-hand-thumbs-up-fill"></i></button> {{ quote.upvote }} <button class="btn btn-outline-dark"><i class="bi bi-hand-thumbs-down-fill"></i></button> {{
+                                    quote.downvote }}</li>
                                 <button (click)='showAuthor(i)' class="btn btn-dark">Show Author</button>
                             </div>
                         </ng-template>
                         <ng-template #empty>
                             <div class="pad">
-                                <li class="p-3">{{ quote.message }} <i class="bi bi-hand-thumbs-up-fill"></i> {{ quote.upvote }} <i class="bi bi-hand-thumbs-down-fill"></i> {{ quote.downvote }}</li>
+                                <li class="p-3">{{ quote.message }} <button class="btn btn-outline-dark"><i class="bi bi-hand-thumbs-up-fill"></i></button> {{ quote.upvote }} <button class="btn btn-outline-dark"><i class="bi bi-hand-thumbs-down-fill"></i></button> {{
+                                    quote.downvote }}</li>
                                 <button (click)='showAuthor(i)' class="btn btn-dark">Show Author</button>
                             </div>
                         </ng-template>
